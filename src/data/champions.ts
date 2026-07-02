@@ -46,7 +46,7 @@ const group3Champions: Champion[] = [
 ];
 
 export const kioskGroups: KioskGroup[] = [
-  { id: 1, title: '\u041a\u043b\u0430\u0441\u0441\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u044d\u0440\u0430', period: '1886-1946', idleVideo: '/media/movies/V_1.mp4', groupVideo: '/media/movies/Video_G1.mov', stella: '/media/stella/C\u0422\u0415\u041b\u041b\u0410_1.PNG', champions: group1Champions },
-  { id: 2, title: '\u0421\u043e\u0432\u0435\u0442\u0441\u043a\u0430\u044f \u0448\u043a\u043e\u043b\u0430', period: '1948-1972', idleVideo: '/media/movies/V2.mp4', groupVideo: '/media/movies/Video_G2.mov', stella: '/media/stella/\u0421\u0422\u0415\u041b\u041b\u0410_2.PNG', champions: group2Champions },
-  { id: 3, title: '\u0421\u043e\u0432\u0440\u0435\u043c\u0435\u043d\u043d\u0430\u044f \u044d\u0440\u0430', period: '1975-\u043d\u0430\u0441\u0442. \u0432\u0440\u0435\u043c\u044f', idleVideo: '/media/movies/V3.mp4', groupVideo: '/media/movies/Video_G3.mov', stella: '/media/stella/\u0421\u0422\u0415\u041b\u041b\u0410_3.PNG', champions: group3Champions },
+  { id: 1, title: '\u041a\u043b\u0430\u0441\u0441\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u044d\u0440\u0430', period: '1886-1946', idleVideo: '/media/movies/V_1.mp4', groupVideo: '/media/movies/Video_G1.mp4', stella: '/media/stella/C\u0422\u0415\u041b\u041b\u0410_1.PNG', champions: group1Champions },
+  { id: 2, title: '\u0421\u043e\u0432\u0435\u0442\u0441\u043a\u0430\u044f \u0448\u043a\u043e\u043b\u0430', period: '1948-1972', idleVideo: '/media/movies/V2.mp4', groupVideo: '/media/movies/Video_G2.mp4', stella: '/media/stella/\u0421\u0422\u0415\u041b\u041b\u0410_2.PNG', champions: group2Champions },
+  { id: 3, title: '\u0421\u043e\u0432\u0440\u0435\u043c\u0435\u043d\u043d\u0430\u044f \u044d\u0440\u0430', period: '1975-\u043d\u0430\u0441\u0442. \u0432\u0440\u0435\u043c\u044f', idleVideo: '/media/movies/V3.mp4', groupVideo: '/media/movies/Video_G3.mp4', stella: '/media/stella/\u0421\u0422\u0415\u041b\u041b\u0410_3.PNG', champions: group3Champions },
 ];

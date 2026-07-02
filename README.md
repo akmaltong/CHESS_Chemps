@@ -1,32 +1,105 @@
-# React + TypeScript + Vite
+# Чемпионы мира по шахматам — Интерактивный киоск
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Веб-приложение для интерактивных стелл/киосков музея шахмат.  
+3 группы чемпионов, каждая со своим экраном, каруселью фото и видео.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Быстрый запуск
 
-## React Compiler
+### Требования
+- [Node.js](https://nodejs.org/) версии 18 или выше
+- [Git](https://git-scm.com/) (с поддержкой Git LFS для видео)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 1. Клонировать репозиторий
 
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```bash
+git lfs install
+git clone https://github.com/akmaltong/CHESS_Chemps.git
+cd CHESS_Chemps
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+> ⚠️ Важно: `git lfs install` нужен для скачивания видео-файлов.
+
+### 2. Установить зависимости
+
+```bash
+npm install
+```
+
+### 3. Запустить
+
+```bash
+npm run dev
+```
+
+### 4. Открыть в браузере
+
+- Киоск 1 (Классическая эра): [http://localhost:3000/kiosk/1](http://localhost:3000/kiosk/1)
+- Киоск 2 (Советская школа): [http://localhost:3000/kiosk/2](http://localhost:3000/kiosk/2)
+- Киоск 3 (Современная эра): [http://localhost:3000/kiosk/3](http://localhost:3000/kiosk/3)
+
+---
+
+## 📱 Как пользоваться
+
+1. Откройте ссылку киоска в браузере (лучше в полноэкранном режиме — F11)
+2. Нажмите на область чемпиона на стелле — откроется карусель фото
+3. Листайте фото стрелками или свайпом
+4. Кнопка "домой" (правый верхний угол) — возврат к стелле
+5. После 60 секунд бездействия — автоматический переход в демо-режим
+
+---
+
+## 🖥️ Режим киоска (для стеллы)
+
+Для запуска в режиме киоска на ПК:
+
+```bash
+npm run build
+npx serve out
+```
+
+Затем откройте Chrome в kiosk-mode:
+
+```bash
+chrome.exe --kiosk http://localhost:3000/kiosk/1
+```
+
+---
+
+## 📁 Структура проекта
+
+```
+chess-champions-web/
+├── public/media/          — Медиа-файлы (фото, видео, UI)
+│   ├── movies/            — Видео чемпионов и демо-ролики
+│   ├── screenshots/       — Скрины из видео (карусель)
+│   ├── stella/            — Изображения стелл (главный экран)
+│   └── ui/                — UI элементы (стрелки, кнопка домой)
+├── src/
+│   ├── app/               — Страницы Next.js
+│   ├── components/        — React-компоненты
+│   └── data/              — Данные чемпионов
+└── package.json
+```
+
+---
+
+## 🛠️ Технологии
+
+- Next.js 14
+- React 18
+- Tailwind CSS
+- TypeScript
+- Git LFS (для видео)
+
+---
+
+## 👥 Группы чемпионов
+
+| Киоск | Период | Чемпионы |
+|-------|--------|----------|
+| 1 | 1886–1946 | Стейниц, Ласкер, Капабланка, Алёхин, Эйве |
+| 2 | 1948–1972 | Ботвинник, Смыслов, Таль, Петросян, Спасский, Фишер |
+| 3 | 1975–н.в. | Карпов, Каспаров, Крамник, Ананд, Карлсен, Лижэнь |
