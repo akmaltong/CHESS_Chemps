@@ -27,7 +27,7 @@ export function useEngineBridge(options?: UseEngineBridgeOptions & {
   onGoIdle?: () => void;
   onMessage?: (message: BridgeMessage) => void;
 }) {
-  const { autoConnect = true, onNavigate, onSelectChampion, onPlayVideo, onWakeUp, onGoIdle, onMessage, ...config } = options || {};
+  const { autoConnect = typeof window !== 'undefined' && window.location.hostname === 'localhost', onNavigate, onSelectChampion, onPlayVideo, onWakeUp, onGoIdle, onMessage, ...config } = options || {};
   const [isConnected, setIsConnected] = useState(false);
   const bridgeRef = useRef(getEngineBridge(config));
   const callbacksRef = useRef({ onNavigate, onSelectChampion, onPlayVideo, onWakeUp, onGoIdle, onMessage });
