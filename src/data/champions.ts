@@ -1,4 +1,4 @@
-export interface Champion {
+﻿export interface Champion {
   id: string;
   name: string;
   nameEn: string;
